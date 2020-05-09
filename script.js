@@ -1,35 +1,26 @@
 'use strict' ;
 
-console.log(leftBorderWidth);
-var leftBorderWidth = 1;
-let second = 2;
-const pi = 3.14;
 
-let person = {
-    name: "John",
-    age: 25,
-    isMarried: false
+
+let money = prompt("Ваш бюджет на месяц?", ''),
+    time = prompt("Введите дату в формате YYYY-MM-DD", '');
+
+let appData = {
+    budget: money,
+    timeData: time,
+    expenses: {},
+    optionalExpenses: {},
+    income: [],
+    savings: false
 };
 
-console.log(person.name);
 
-let arr = ['plum.png','orange.jpg', 'apple.bmp'];
+let a1 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+    a2 = propmt("Во сколько обойдется?", ''),
+    a3 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+    a4 = prompt("Во сколько обойдется?", '');
 
-console.log(arr[2]);
+appData.expenses.a1 = a2;
+appData.expenses.a3 = a4;
 
-/*alert('Hello bitch!');
-console.log(answer);
-
-let answer = prompt('Есть ли вам 18?', 'да');
-
-console.log(answer);*/
-
-let incr = 10,
-    decr = 10;
-
-
-console.log(++incr);
-console.log(--decr);
-
-
-console.log(5%2);
+alert(appData.budget / 30);
